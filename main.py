@@ -30,11 +30,11 @@ if a == 2:
         print("Вы вошли как админ")
     else:
         print("Вы вошли как обычный пользователь")
-        admin_become = int(input("Хотите стать Админ?\n"))
+        admin_become = int(input("Хотите стать админом?\n"))
         if admin_become == 1:
             admin_password = input("Введите пароль для становления Admin: ")
             if admin_password == '777':
-                print("Вы стали админ")
+                print("Вы стали админом")
                 admins['login'].append(login)
 
 
