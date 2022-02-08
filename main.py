@@ -1,8 +1,7 @@
 users = {'Ruslan4ik' : {
     'password': '123',
     'money': '1000'
-},
-"Yusuf" : {
+},'Yusuf' : {
 'password': '111',
 'money': '2000'}}
 #--------------------------
@@ -17,12 +16,18 @@ if a == 1:
     users[login] = {}
     users[login]['password'] = password
     users[login]['money'] = money
+    admin_become = int(input("Хотите стать админом?\n"))
+    if admin_become == 1:
+        admin_password = input("Введите пароль для становления Admin: ")
+        if admin_password == '777':
+            print("Вы стали админом")
+            admins['login'].append(login)
 if a == 2:
     login = input("Введите логин: ")
     password = input("Введите пароль: ")
     try:
         users[login]
-        users[login]['password']
+        users[login][password]
     except:
         login = input("Введите верный логин: ")
         password = input("Введите верный пароль: ")
@@ -36,7 +41,5 @@ if a == 2:
             if admin_password == '777':
                 print("Вы стали админом")
                 admins['login'].append(login)
-
-
-
-# комент
+print(users)
+print(admins)
