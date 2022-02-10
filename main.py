@@ -36,6 +36,11 @@ if a == 1:
                     print(*all_users, sep='\n')
                     print('')
                     print('-------------')
+                all_money = 0
+                for x in users:
+                    all_money = users[login]['money'] + all_money
+                all_money += money
+                print("Всего денег в банке: ", all_money)
         if operations == 5:
             login_n = input("Введите новый логин: ")
             password_n = input("Введите новый пароль: ")
