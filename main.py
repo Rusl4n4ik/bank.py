@@ -142,7 +142,7 @@ if a == 2:
             password_n = input("Введите новый пароль: ")
             users[login] = login_n
             users[login]['password'] = password_n
-            users[login]['money'] = money
+            users[login]['money'] =
             print(users)
 print(users)
 print(admins)
